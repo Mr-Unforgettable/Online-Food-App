@@ -8,8 +8,7 @@
     },
     "extends": [
         "standard",
-        "plugin:react/recommended",
-        "plugin:prettier/recommended"
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": "latest"
