@@ -3,7 +3,7 @@ import React from 'react'
 export default function Carousel () {
   return (
     <div>
-      <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ objectFit: 'contain!important' }}>
+      <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ objectFit: 'contain !important' }}>
         <div className="carousel-inner" id='carousel'>
           <div className="carousel-caption" style={{ zIndex: '10' }} >
               <form className="d-flex">
