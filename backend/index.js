@@ -22,6 +22,9 @@ app.get('/', (req, res) => {
 app.use(express.json())
 app.use('/api', require('./routes/signup'))
 
+app.use(express.json())
+app.use('/api', require('./routes/login'))
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)
 })

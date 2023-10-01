@@ -24,7 +24,9 @@ export default function Signup () {
       console.log(json)
 
       if (!json.success) {
-        alert(' ⚠ Enter valid Credentials!')
+        alert('⚠ Enter valid Credentials!')
+      } else {
+        alert('Account created successfully')
       }
     } catch (err) {
       console.error(err)

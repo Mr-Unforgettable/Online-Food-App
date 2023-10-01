@@ -22,10 +22,10 @@ router.post('/signup',
         email: req.body.email,
         location: req.body.location
       })
-      res.json({ success: true })
+      res.json({ success: 'Account created successfully 😁' })
     } catch (err) {
       console.error(err)
-      res.json({ success: false })
+      res.json({ success: 'Account creation failed 💀' })
     }
   })
 
