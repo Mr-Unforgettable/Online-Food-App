@@ -15,3 +15,15 @@ code {
 #carousel {
   max-height: 600px;
 }
+
+.card-img-top {
+  max-width: 100%;
+  max-height: 100%;
+  /* width: auto;
+  height: auto; */
+}
+
+.card {
+  width: 18rem;
+  max-height: 360px;
+}
