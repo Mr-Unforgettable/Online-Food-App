@@ -41,7 +41,7 @@ export default function Navbar () {
                 ? (
                 <li className="nav-item">
                   <Link className="nav-link fs-5" aria-current="page" to="/">
-                    My Orders
+                    Orders
                   </Link>
                 </li>
                   )
