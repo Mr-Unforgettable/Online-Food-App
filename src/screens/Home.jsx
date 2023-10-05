@@ -126,7 +126,6 @@ export default function Home () {
                         options={filterItems.options[0]}
                         image={filterItems.img}
                         // description={filterItems.description}
-                        size={200}
                       />
                     </div>
                   ))}

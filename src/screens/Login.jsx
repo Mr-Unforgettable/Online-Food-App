@@ -25,11 +25,11 @@ export default function Login () {
         alert(' ⚠ Enter valid Credentials!')
       } else {
         alert('Login Successful!')
-        setTimeout(() => {
-          localStorage.setItem('authToken', json.authToken)
-          navigate('/')
-        }, 2000)
-        console.log(localStorage.getItem('authToken'))
+        localStorage.setItem('authToken', json.authToken)
+        navigate('/')
+        /* setTimeout(() => {
+        }, 2000) */
+        // console.log(localStorage.getItem('authToken'))
       }
     } catch (err) {
       console.error(err)

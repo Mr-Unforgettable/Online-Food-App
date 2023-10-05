@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function Card (props) {
-  const { foodName, options, image, description, size } = props
+  const { foodName, options, image, description } = props
   const priceOptions = Object.keys(options)
 
   return (
     <div>
       <div className="card mt-3" style={{ width: '18rem', maxHeight: '360px' }}>
-        <img src={image} height={size} width={size} className="card-img-top" alt="..." />
+        <img src={image} className="card-img-top" alt="..." style={{ height: '150px', objectFit: 'cover' }}/>
         <div className="card-body">
           <h5 className="card-title">{foodName}</h5>
           <p>{description}</p>
