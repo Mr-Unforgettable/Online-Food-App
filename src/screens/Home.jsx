@@ -30,7 +30,7 @@ export default function Home () {
     <>
       <div>
         <Navbar />
-        <div>
+        <div data-bs-theme="dark">
           <div
             id="carouselExampleFade"
             className="carousel slide carousel-fade"
@@ -56,7 +56,7 @@ export default function Home () {
                   </button> */}
                 </div>
               </div>
-              <div className="carousel-item active">
+              <div className="carousel-item active" >
                 <img
                   src="https://source.unsplash.com/random/900x700/?fries"
                   className="d-block w-100"
@@ -107,7 +107,7 @@ export default function Home () {
             </button>
           </div>
         </div>
-        <div className="m-3 container">
+        <div className="m-3 container" data-bs-theme="dark">
           {foodCategory.length > 0
             ? (
                 foodCategory.map((data) => (

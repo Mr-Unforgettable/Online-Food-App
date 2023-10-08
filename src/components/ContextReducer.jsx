@@ -4,9 +4,24 @@ import PropTypes from 'prop-types'
 const cartStateContext = createContext()
 const cartDispatchContext = createContext()
 const reducer = (state, action) => {
+  let newArr, arr
   switch (action.type) {
     case 'ADD':
       return [...state, { id: action.id, name: action.name, qty: action.qty, price: action.price, size: action.size }]
+    case 'REMOVE':
+      newArr = [...state]
+      newArr.splice(action.index, 1)
+      return newArr
+    case 'UPDATE':
+      arr = [...state]
+      arr.find((food, index) => {
+        if (food.id === action.id) {
+          console.log(food.qty, parseInt(action.qty), action.price + food.price)
+          arr[index] = { ...food, qty: parseInt(action.qty) + food.qty, price: action.price + food.price }
+        }
+        return arr
+      })
+      return arr
     default:
       console.log('Error in the reducer')
   }

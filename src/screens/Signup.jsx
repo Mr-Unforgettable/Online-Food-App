@@ -39,7 +39,7 @@ export default function Signup () {
 
   return (
     <>
-      <div className="container">
+      <div className="container px-10 py-10" >
         <form onSubmit={handleSubmit}>
           <div className="form-group mb-3">
             <label htmlFor="Name">Name</label>
