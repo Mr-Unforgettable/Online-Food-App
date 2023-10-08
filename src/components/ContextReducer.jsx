@@ -25,6 +25,8 @@ const reducer = (state, { type, id, name, qty, price, size, index }) => {
         }
         return food
       })
+    case 'DROPOFF':
+      return []
     default:
       console.log('Error in the reducer')
   }

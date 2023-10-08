@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Signup () {
+  const navigate = useNavigate()
   const [credentials, setCredentials] = useState({ name: '', email: '', password: '', location: '' })
 
   const handleSubmit = async (e) => {
@@ -27,6 +28,7 @@ export default function Signup () {
         alert('⚠ Enter valid Credentials!')
       } else {
         alert('Account created successfully')
+        navigate('/login')
       }
     } catch (err) {
       console.error(err)
@@ -63,6 +65,7 @@ export default function Signup () {
               aria-describedby="emailHelp"
               placeholder="Enter email"
               name="email"
+              autoComplete='current-email'
               value={ credentials.email }
               onChange={onChange}
             />
@@ -75,6 +78,7 @@ export default function Signup () {
               id="exampleInputPassword1"
               placeholder="Password"
               name="password"
+              autoComplete='current-password'
               value={ credentials.password }
               onChange={onChange}
             />

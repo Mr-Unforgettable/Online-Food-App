@@ -25,6 +25,7 @@ export default function Login () {
         alert(' ⚠ Enter valid Credentials!')
       } else {
         alert('Login Successful!')
+        localStorage.setItem('userEmail', credentials.email)
         localStorage.setItem('authToken', json.authToken)
         navigate('/')
         /* setTimeout(() => {
@@ -53,6 +54,7 @@ export default function Login () {
               aria-describedby="emailHelp"
               placeholder="Enter email"
               name="email"
+              autoComplete='current-email'
               value={ credentials.email }
               onChange={onChange}
             />
@@ -65,6 +67,7 @@ export default function Login () {
               id="exampleInputPassword1"
               placeholder="Password"
               name="password"
+              autoComplete='current-password'
               value={ credentials.password }
               onChange={onChange}
             />

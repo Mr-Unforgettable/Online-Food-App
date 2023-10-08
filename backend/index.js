@@ -21,10 +21,8 @@ app.get('/', (req, res) => {
 
 app.use(express.json())
 app.use('/api', require('./routes/signup'))
-
 app.use('/api', require('./routes/fetchData'))
-
-app.use(express.json())
+app.use('/api', require('./routes/orderData'))
 app.use('/api', require('./routes/login'))
 
 app.listen(port, () => {
