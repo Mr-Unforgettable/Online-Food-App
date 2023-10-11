@@ -15,15 +15,16 @@ app.use((req, res, next) => {
   next() // call next() to move to the next middleware or route handler.
 })
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//  res.send('Hello World!')
+// })
 
 app.use(express.json())
 app.use('/api', require('./routes/signup'))
 app.use('/api', require('./routes/fetchData'))
 app.use('/api', require('./routes/orderData'))
 app.use('/api', require('./routes/login'))
+app.use('/api', require('./routes/myOrder'))
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)
