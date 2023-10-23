@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 require('dotenv').config()
-// const mongoURI = `mongodb+srv://${username}:${password}@cluster0.vri3870.mongodb.net/gofood_db?retryWrites=true&w=majority`
 const mongoURI = process.env.URI
 const mongoDB = async () => {
   try {
@@ -14,10 +13,6 @@ const mongoDB = async () => {
     // Fetch and convert data
     const fetchedFoodItems = await foodItem.find({}).lean()
     const fetchedFoodCategories = await foodCategory.find({}).lean()
-
-    // // Convert the fetchedData to an array
-    // const dataArray1 = fetchedFoodItems.map(item => item.toObject())
-    // const dataArray2 = fetchedFoodCategory.map(item => item.toObject())
 
     // Storing the data into the global variables
     global.foodItems = fetchedFoodItems
